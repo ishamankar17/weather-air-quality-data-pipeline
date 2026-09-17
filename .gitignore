@@ -1,0 +1,26 @@
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Environment variables / secrets
+.env
+*.env
+
+# Raw and processed data
+data/raw/
+data/processed/
+
+# PySpark / Spark generated files
+spark-warehouse/
+metastore_db/
+derby.log
+
+# IDE settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -24,3 +24,6 @@ derby.log
 # OS files
 .DS_Store
 Thumbs.db
+
+# Error / debug files
+spark_error.txt

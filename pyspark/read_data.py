@@ -67,13 +67,21 @@ df.printSchema()
 print("\nSample cleaned data:")
 df.orderBy("timestamp").show(10, truncate=False)
 
-# Save cleaned data as Parquet
-df.write \
-    .mode("overwrite") \
-    .parquet(output_path)
+# Convert processed Spark DataFrame to JSON records
+processed_data = [
+    row.asDict()
+    for row in df.collect()
+]
 
-print("\nCleaned Parquet data saved to:")
-print(output_path)
+# Save processed data as JSON
+import json
 
-# Stop Spark
-spark.stop()
+output_json = r"C:\weather_pipeline_output\processed_weather_air_quality.json"
+
+with open(output_json, "w", encoding="utf-8") as f:
+    json.dump(processed_data, f, indent=4, default=str)
+
+print("\nProcessed JSON data saved to:")
+print(output_json)
+
+print("Processed record count:", len(processed_data))

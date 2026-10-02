@@ -27,3 +27,6 @@ Thumbs.db
 
 # Error / debug files
 spark_error.txt
+
+logs/
+weather_air_quality/

@@ -53,9 +53,7 @@ invalid_pm25 = df.filter(
 
 print("Invalid PM2.5 records:", invalid_pm25)
 
-# --------------------------------------------------
 # 5. Validate PM10
-# --------------------------------------------------
 
 print("\n========== PM10 VALIDATION ==========")
 

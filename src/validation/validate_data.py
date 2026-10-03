@@ -24,9 +24,8 @@ for column in df.columns:
     missing = df.filter(col(column).isNull()).count()
     print(f"{column}: {missing}")
 
-# --------------------------------------------------
+
 # 2. Check duplicate records
-# --------------------------------------------------
 
 print("\n========== DUPLICATES ==========")
 
@@ -34,10 +33,7 @@ duplicate_count = df.count() - df.dropDuplicates().count()
 
 print("Duplicate records:", duplicate_count)
 
-# --------------------------------------------------
 # 3. Validate humidity
-# --------------------------------------------------
-
 print("\n========== HUMIDITY VALIDATION ==========")
 
 invalid_humidity = df.filter(
@@ -47,9 +43,7 @@ invalid_humidity = df.filter(
 
 print("Invalid humidity records:", invalid_humidity)
 
-# --------------------------------------------------
 # 4. Validate PM2.5
-# --------------------------------------------------
 
 print("\n========== PM2.5 VALIDATION ==========")
 
@@ -71,9 +65,7 @@ invalid_pm10 = df.filter(
 
 print("Invalid PM10 records:", invalid_pm10)
 
-# --------------------------------------------------
 # 6. Validate precipitation
-# --------------------------------------------------
 
 print("\n========== PRECIPITATION VALIDATION ==========")
 
@@ -83,9 +75,7 @@ invalid_precipitation = df.filter(
 
 print("Invalid precipitation records:", invalid_precipitation)
 
-# --------------------------------------------------
 # 7. Validate city
-# --------------------------------------------------
 
 print("\n========== CITY VALIDATION ==========")
 
@@ -95,9 +85,9 @@ invalid_city = df.filter(
 
 print("Invalid city records:", invalid_city)
 
-# --------------------------------------------------
+
 # 8. Validate timestamp
-# --------------------------------------------------
+
 
 print("\n========== TIMESTAMP VALIDATION ==========")
 
@@ -112,9 +102,9 @@ invalid_timestamp = df.filter(
 
 print("Invalid timestamp records:", invalid_timestamp)
 
-# --------------------------------------------------
+
 # 9. Show invalid records
-# --------------------------------------------------
+
 
 print("\n========== INVALID RECORDS ==========")
 

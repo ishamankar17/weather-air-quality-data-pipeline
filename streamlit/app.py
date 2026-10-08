@@ -5,9 +5,7 @@ import streamlit as st
 from google.cloud import bigquery
 from plotly.subplots import make_subplots
 
-# =========================================================
 # PAGE CONFIGURATION
-# =========================================================
 st.set_page_config(
     page_title="Pune Weather & Air Quality Dashboard",
     page_icon="🌦️",

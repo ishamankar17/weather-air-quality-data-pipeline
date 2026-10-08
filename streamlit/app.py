@@ -19,9 +19,8 @@ def html(snippet: str) -> str:
     return " ".join(line.strip() for line in snippet.splitlines() if line.strip())
 
 
-# =========================================================
 # COLOUR SYSTEM
-# =========================================================
+
 BG = "#F3F6FB"
 PANEL = "#FFFFFF"
 TEXT = "#1B2437"

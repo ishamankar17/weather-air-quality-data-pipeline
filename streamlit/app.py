@@ -13,13 +13,8 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-
-# =========================================================
 # HTML HELPER
-# Markdown treats lines indented 4+ spaces as code blocks and a blank
-# line ends an HTML block, which is why raw HTML/CSS showed up as text.
-# This collapses any HTML/CSS snippet into one clean line.
-# =========================================================
+
 def html(snippet: str) -> str:
     return " ".join(line.strip() for line in snippet.splitlines() if line.strip())
 

@@ -18,32 +18,26 @@ An end-to-end data engineering project that ingests hourly weather and air-quali
 ```mermaid
 flowchart LR
     A["Open-Meteo API"] --> B["Python Ingestion"]
-    B --> C[("Raw JSON")]
-    C --> D["PySpark Cleaning"]
+    B --> C[("Raw JSON Files")]
+    C --> D["PySpark Combine & Clean"]
     D --> E["Data Validation"]
-    E --> F[("BigQuery")]
-    F --> G["dbt Models & Tests"]
-    G --> H["Daily Analytics"]
+    E --> F[("BigQuery Fact Table")]
+    F --> G["dbt Staging Model"]
+    G --> H["Daily Analytics Model"]
     H --> I["Streamlit Dashboard"]
-
-    J["Apache Airflow"] -. Orchestrates .-> B
+ 
+    J["Apache Airflow"] -.-> B
     J -.-> D
     J -.-> E
-    J -. Runs dbt .-> G
-
-    style A fill:#DCEAFE,stroke:#2563EB,color:#111827
-    style B fill:#DCEAFE,stroke:#2563EB,color:#111827
-    style C fill:#DCEAFE,stroke:#2563EB,color:#111827
-    style D fill:#D1FAE5,stroke:#059669,color:#111827
-    style E fill:#D1FAE5,stroke:#059669,color:#111827
-    style F fill:#FEF3C7,stroke:#D97706,color:#111827
-    style G fill:#FEF3C7,stroke:#D97706,color:#111827
-    style H fill:#FEF3C7,stroke:#D97706,color:#111827
-    style I fill:#FCE7F3,stroke:#DB2777,color:#111827
-    style J fill:#EDE9FE,stroke:#7C3AED,color:#111827
+    J -. "Runs dbt build" .-> G
+ 
+    classDef bw fill:#FFFFFF,stroke:#000000,stroke-width:1.5px,color:#000000
+    class A,B,C,D,E,F,G,H,I,J bw
+    linkStyle default stroke:#000000,stroke-width:1.5px
 ```
-
+ 
 ---
+ 
 
 ##  Tech Stack
 

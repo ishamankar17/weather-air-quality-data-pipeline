@@ -90,7 +90,7 @@ flowchart LR
 - Python 3.10+
 - Docker and Docker Compose
 - A Google Cloud project with BigQuery enabled
-- A service account key (JSON) with BigQuery access
+- Google Cloud authentication configured for BigQuery access
 
 
 

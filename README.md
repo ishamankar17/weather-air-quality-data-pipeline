@@ -53,7 +53,7 @@ flowchart LR
 
 ---
 
-## 📊 Key Features
+## Key Features
 
 -  **Hourly data** for weather and air quality in Pune
 -  **Robust cleaning**: duplicate removal and schema validation with PySpark

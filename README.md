@@ -12,22 +12,8 @@ An end-to-end data engineering project that ingests hourly weather and air-quali
 
 ---
 
-## 📑 Table of Contents
 
-- [Architecture](#️-architecture)
-- [Tech Stack](#️-tech-stack)
-- [Key Features](#-key-features)
-- [Pipeline Stages](#-pipeline-stages)
-- [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
-- [Run the Dashboard](#️-run-the-dashboard)
-- [Future Improvements](#-future-improvements)
-- [Data Source](#-data-source)
-- [Author](#-author)
-
----
-
-## 🏗️ Architecture
+## Architecture
 
 ```mermaid
 flowchart LR
@@ -59,7 +45,7 @@ flowchart LR
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Layer | Technology | Purpose |
 |---|---|---|
@@ -75,16 +61,16 @@ flowchart LR
 
 ## 📊 Key Features
 
-- ⏱️ **Hourly data** for weather and air quality in Pune
-- 🧹 **Robust cleaning**: duplicate removal and schema validation with PySpark
-- 🏛️ **BigQuery warehouse** with analytical models
-- 🧪 **dbt staging and daily aggregation models**, backed by data tests
-- 🔁 **Airflow DAG** that automates the full workflow end to end
-- 📈 **Interactive dashboard** with KPI cards, trend charts, AQI categories, date filters, and cross-filtering
+-  **Hourly data** for weather and air quality in Pune
+-  **Robust cleaning**: duplicate removal and schema validation with PySpark
+-  **BigQuery warehouse** with analytical models
+-  **dbt staging and daily aggregation models**, backed by data tests
+-  **Airflow DAG** that automates the full workflow end to end
+-  **Interactive dashboard** with KPI cards, trend charts, AQI categories, date filters, and cross-filtering
 
 ---
 
-## 🔄 Pipeline Stages
+##  Pipeline Stages
 
 | # | Stage | Description |
 |---|---|---|
@@ -97,26 +83,7 @@ flowchart LR
 
 ---
 
-## 📁 Project Structure
 
-> Adjust folder names to match your repository.
-
-```text
-.
-├── airflow/          # DAGs and Airflow configuration
-├── ingestion/        # Open-Meteo API scripts
-├── spark/            # PySpark cleaning and validation jobs
-├── dbt/              # Staging models, daily aggregates, tests
-├── streamlit/
-│   └── app.py        # Dashboard entry point
-├── docker-compose.yml
-├── requirements.txt
-└── README.md
-```
-
----
-
-## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -125,33 +92,9 @@ flowchart LR
 - A Google Cloud project with BigQuery enabled
 - A service account key (JSON) with BigQuery access
 
-### Setup
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/ishamankar17/<your-repo-name>.git
-cd <your-repo-name>
 
-# 2. Install dependencies
-pip install -r requirements.txt
-
-# 3. Authenticate with Google Cloud
-export GOOGLE_APPLICATION_CREDENTIALS="path/to/service-account.json"
-```
-
----
-
-## ▶️ Run the Dashboard
-
-After configuring Google Cloud authentication and installing the dependencies:
-
-```bash
-streamlit run streamlit/app.py
-```
-
----
-
-## 🔮 Future Improvements
+##  Future Improvements
 
 - Add more cities and a city selector in the dashboard
 - Introduce incremental loading in BigQuery

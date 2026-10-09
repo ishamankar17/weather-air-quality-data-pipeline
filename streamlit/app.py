@@ -41,7 +41,6 @@ AQI_COLORS = ["#2ecc71", "#a3d977", "#f1c40f", "#e67e22", "#e74c3c", "#8e44ad"]
 
 CHART_H = 215
 
-
 # CUSTOM CSS
 st.markdown(
     html(

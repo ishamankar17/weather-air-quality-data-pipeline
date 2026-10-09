@@ -97,7 +97,7 @@ flowchart LR
 
 ---
 
-## 🌐 Data Source
+## Data Source
 
 Weather and air-quality data is provided by the [Open-Meteo API](https://open-meteo.com/).
 
